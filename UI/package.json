@@ -4,7 +4,8 @@
   "description": "UI automated tests for MOP QA website",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/wdio wdio.conf.ts"
+    "test": "./node_modules/.bin/wdio wdio.conf.ts",
+    "allure:report": "allure generate ./allure-results --clean && allure open"
   },
   "keywords": [
     "webdriverio",

@@ -138,7 +138,12 @@ export const config: WebdriverIO.Config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec',['allure', {outputDir: 'allure-results'}]],
+    reporters: ['spec',['allure', {
+        outputDir: 'allure-results',
+        disableWebdriverStepsReporting: true,
+        disableWebdriverScreenshotsReporting: false,
+        useCucumberStepReporter: true
+    }]],
 
 
     //
@@ -262,9 +267,9 @@ export const config: WebdriverIO.Config = {
      * @param {number}             result.duration duration of scenario in milliseconds
      */
     afterStep: async function (step, scenario, result) {
-        if(true !== result.passed || result.error) {
+        //if(true !== result.passed || result.error) {
             await browser.takeScreenshot()
-        }
+        //}
     },
     /**
      *
