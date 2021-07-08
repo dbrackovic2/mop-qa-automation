@@ -26,6 +26,7 @@
     "chromedriver": "^91.0.1",
     "ts-node": "^10.0.0",
     "typescript": "^4.3.5",
-    "wdio-chromedriver-service": "^7.1.1"
+    "wdio-chromedriver-service": "^7.1.1",
+    "faker":"^5.5.3"
   }
 }
