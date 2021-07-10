@@ -22,14 +22,14 @@ class SignupPage extends Page {
             fullName: `${faker.name.firstName()} ${faker.name.lastName()}`,
             email: faker.internet.email(),
             phone: faker.phone.phoneNumber(),
-            password: faker.internet.password()
+            password: `${faker.internet.password()}_A+2?`
         }
     }
     async register() {
         await (await this.inputEmail).setValue(global.profile.email)
         await (await this.inputName).setValue(global.profile.fullName)
-        await (await this.inputPassword).setValue(`${global.profile.password}_A+2?`)
-        await (await this.inputConfirmPassword).setValue(`${global.profile.password}_A+2?`)
+        await (await this.inputPassword).setValue(global.profile.password)
+        await (await this.inputConfirmPassword).setValue(global.profile.password)
         await (await this.inputPhoneNumber).setValue(`+123456789`)
         await (await this.inputTermsAndConditions).click()
         await (await this.btnSubmit).click()

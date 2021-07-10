@@ -1,3 +1,6 @@
 UI/node_modules
 UI/allure-results
 UI/allure-report
+API/node_modules
+API/allure-results
+API/allure-report
