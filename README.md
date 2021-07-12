@@ -42,6 +42,7 @@ API integration tests are implemented using Mocha and Axios npm packages. Progra
 To run the API tests navigate to the API directory and then run the npm command to run tests:
 ```
 cd API
+npm install
 npm test
 ```
 
@@ -67,6 +68,7 @@ UI automated tests are implemented using WebdriverIO + Typescript + Cucumber.
 To run the UI automated tests first navigate to the UI directory then run the npm test command:
 ```
 cd UI
+npm install
 npm test
 ```
 
